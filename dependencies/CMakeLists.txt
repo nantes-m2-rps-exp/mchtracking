@@ -1,0 +1,6 @@
+find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+find_package(FairLogger REQUIRED)
+find_package(Python COMPONENTS Interpreter Development REQUIRED)
+find_package(ROOT REQUIRED)
+find_package(fmt REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
