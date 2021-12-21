@@ -13,6 +13,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/stage/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/stage/bin)
 
 set(BUILD_SHARED_LIBS ON)
+option(BUILD_PYTHON_BINDINGS "Build Python bindings" ON)
 
 include(dependencies/CMakeLists.txt)
 

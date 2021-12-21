@@ -39,4 +39,6 @@ file(COPY maps DESTINATION ${CMAKE_BINARY_DIR}/stage/${CMAKE_INSTALL_DATAROOTDIR
 
 install(TARGETS o2field)
 
-add_subdirectory(bindings)
+if(BUILD_PYTHON_BINDINGS)
+  add_subdirectory(bindings)
+endif()

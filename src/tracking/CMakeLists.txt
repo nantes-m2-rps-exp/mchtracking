@@ -17,4 +17,8 @@ target_include_directories(o2tracking
 
 target_link_libraries(o2tracking PUBLIC ROOT::Geom ROOT::MathMore FairLogger::FairLogger o2field)
 
-add_subdirectory(bindings)
+install(TARGETS o2tracking)
+
+if(BUILD_PYTHON_BINDINGS)
+  add_subdirectory(bindings)
+endif()
