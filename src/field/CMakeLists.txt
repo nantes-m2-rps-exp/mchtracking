@@ -26,13 +26,6 @@ root_generate_dictionary(G__o2field
   MODULE o2field)
 target_link_libraries(o2field PUBLIC FairLogger::FairLogger ROOT::Geom)
 
-add_executable(test-magnetic-field testMagneticField.cxx)
-target_link_libraries(test-magnetic-field PRIVATE Boost::unit_test_framework
-o2field)
-
-add_test(NAME testMagneticField COMMAND test-magnetic-field)
-set_tests_properties(testMagneticField PROPERTIES ENVIRONMENT O2_ROOT=${CMAKE_BINARY_DIR}/stage)
-
 install(DIRECTORY maps DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/Common)
 
 file(COPY maps DESTINATION ${CMAKE_BINARY_DIR}/stage/${CMAKE_INSTALL_DATAROOTDIR}/Common)

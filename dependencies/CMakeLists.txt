@@ -30,7 +30,6 @@ if(NOT FairLogger_FOUND)
 endif()
 
 find_package(ROOT REQUIRED)
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
