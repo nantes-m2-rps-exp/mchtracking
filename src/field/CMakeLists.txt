@@ -26,6 +26,14 @@ root_generate_dictionary(G__o2field
   MODULE o2field)
 target_link_libraries(o2field PUBLIC FairLogger::FairLogger ROOT::Geom)
 
+set_property(TARGET o2field PROPERTY PUBLIC_HEADER
+  MagneticField.h
+  MagneticWrapperChebyshev.h
+  MagFieldFast.h
+  Chebyshev3D.h
+  Chebyshev3DCalc.h
+)
+
 install(DIRECTORY maps DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/Common)
 
 file(COPY maps DESTINATION ${CMAKE_BINARY_DIR}/stage/${CMAKE_INSTALL_DATAROOTDIR}/Common)
